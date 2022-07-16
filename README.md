@@ -2,7 +2,7 @@
 
 ## 简介
 
-本文档是石河子大学陈庭伟同学为 STM32F103 德飞莱-尼莫 M3S 开发板提供的 BSP (板级支持包) 说明。
+本文档为 STM32F103 德飞莱-尼莫 M3S 开发板提供的 BSP (板级支持包) 说明。
 
 主要内容如下：
 
@@ -31,7 +31,7 @@ STM32F103 德飞莱-尼莫 M3S 是徳飞莱推出的一款基于 ARM Cortex-M3 �
 - 常用接口：USB 转串口、SD 卡接口、RS232 接口、LCD 接口、NRF24L01接口等
 - 调试接口，标准 JTAG/SWD
 
-开发板更多详细信息请参考徳飞莱的 [STM32F103-尼莫M3S 开发板介绍](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-1022655459.10.44ae4d22Wa8UIo&id=44835368405)。
+开发板更多详细信息请参考徳飞莱的 [STM32F103-尼莫M3S 开发板介绍](https://detail.tmall.com/item.htm?spm=a230r.1.14.1.19fd6253lremFF&id=44445803337&ns=1&abbucket=5&skuId=3945720902215)。
 
 ## 外设支持
 
@@ -108,10 +108,10 @@ msh >
 
 ## 注意事项
 
-- 这款开发板使用终端工具 SecureCRT 来打开串口会出现系统不能启动的问题，推荐使用 XCOM V2.0。
+- 这款开发板使用终端工具 SecureCRT 来打开串口会出现系统不能启动的问题(需要在配置里关闭流控)。
 
 ## 联系人信息
 
 维护人:
 
--  [WillianChan](https://github.com/willianchanlovegithub)
+-  [SSZL](https://github.com/sszllzss)
