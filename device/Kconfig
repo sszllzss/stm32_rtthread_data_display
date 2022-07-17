@@ -1,0 +1,8 @@
+menu "Drivers Config"
+
+config BSP_USING_FSMC_LCD
+	bool "Enable FSMC LCD"
+	select RT_USING_PIN
+	default n
+  
+endmenu

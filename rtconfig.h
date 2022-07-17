@@ -101,9 +101,6 @@
 /* Utilities */
 
 
-/* RT-Thread Utestcases */
-
-
 /* RT-Thread online packages */
 
 /* IoT - internet of things */
@@ -150,9 +147,6 @@
 /* enhanced kernel services */
 
 
-/* POSIX extension functions */
-
-
 /* acceleration: Assembly language or algorithmic acceleration packages */
 
 
@@ -195,5 +189,9 @@
 
 /* Board extended module Drivers */
 
+
+/* Drivers Config */
+
+#define BSP_USING_FSMC_LCD
 
 #endif

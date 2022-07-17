@@ -1,0 +1,85 @@
+STM32CubeProgrammer CLI dependencies (Standalone Tree) 
+
+--------------
+  Windows OS
+--------------
+
+STM32CubeProgrammer
+|
+|   
++---bin
+|   |   CubeProgrammer_API.dll
+|   |   libgcc_s_dw2-1.dll
+|   |   libstdc++-6.dll
+|   |   Qt5Core.dll
+|   |   Qt5SerialPort.dll
+|   |   Qt5Xml.dll
+|   |   STLinkUSBDriver.dll
+|   |   STM32_Programmer_CLI.exe
+|   |   version
+|   | 
+|   +---FlashLoader
+|   +---ExternalLoader
+|   |
++---Data_Base
+
+
+--------------
+   Linux OS
+--------------
+
+STM32CubeProgrammer
+|
+|   
++---lib
+|   |   libCubeProgrammer_API.so
+|   |   libCubeProgrammer_API.so.1 
+|   |   libSTLinkUSBDriver.so 
+|   |   libQt5SerialPort.so.5 
+|   |   libQtXml.so.5 
+|   |   libQt5Core.so.5 
+|   |   libicudata.so.56 
+|   |   libicui18n.so.56 
+|   |   libicuuc.so.56 
+|   |
++---bin
+|   |   STM32_Programmer_CLI
+|   |   version
+|   |   
+|   +---FlashLoader
+|   +---ExternalLoader
+|   |
++---Data_Base
+
+
+--------------
+   MAC OS
+--------------
+
+STM32CubeProgrammer.app/contents/MacOs
+|
+|  
++---bin
+|   |   libCubeProgrammer_API.dylib 
+|   |   libSTLinkUSBDriver.dylib
+|   |   libusb-1.0.0.dylib 
+|   |   QtSerialPort.framework 
+|   |   QtXml.framework 
+|   |   QtCore.framework  
+|   |   STM32_Programmer_CLI
+|   |   version
+|   |   
+|   +---FlashLoader
+|   +---ExternalLoader
+|   |
++---Data_Base
+
+
+
+
+
+
+
+
+
+
