@@ -114,6 +114,8 @@ void Error_Handler(void);
 #define DEBUG_TX_GPIO_Port GPIOA
 #define DEBUG_RX_Pin GPIO_PIN_10
 #define DEBUG_RX_GPIO_Port GPIOA
+#define DHT11_S_Pin GPIO_PIN_15
+#define DHT11_S_GPIO_Port GPIOA
 #define OV_SCL_Pin GPIO_PIN_3
 #define OV_SCL_GPIO_Port GPIOD
 #define FIFO_WRST_Pin GPIO_PIN_6

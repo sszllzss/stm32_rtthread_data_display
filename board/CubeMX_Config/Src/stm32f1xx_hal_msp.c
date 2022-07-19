@@ -415,6 +415,41 @@ void HAL_TIM_OC_MspInit(TIM_HandleTypeDef* htim_oc)
 
 }
 
+/**
+* @brief TIM_IC MSP Initialization
+* This function configures the hardware resources used in this example
+* @param htim_ic: TIM_IC handle pointer
+* @retval None
+*/
+void HAL_TIM_IC_MspInit(TIM_HandleTypeDef* htim_ic)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  if(htim_ic->Instance==TIM2)
+  {
+  /* USER CODE BEGIN TIM2_MspInit 0 */
+
+  /* USER CODE END TIM2_MspInit 0 */
+    /* Peripheral clock enable */
+    __HAL_RCC_TIM2_CLK_ENABLE();
+
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /**TIM2 GPIO Configuration
+    PA15     ------> TIM2_CH1
+    */
+    GPIO_InitStruct.Pin = DHT11_S_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(DHT11_S_GPIO_Port, &GPIO_InitStruct);
+
+    __HAL_AFIO_REMAP_TIM2_PARTIAL_1();
+
+  /* USER CODE BEGIN TIM2_MspInit 1 */
+
+  /* USER CODE END TIM2_MspInit 1 */
+  }
+
+}
+
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef* htim)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -459,6 +494,34 @@ void HAL_TIM_OC_MspDeInit(TIM_HandleTypeDef* htim_oc)
   /* USER CODE BEGIN TIM1_MspDeInit 1 */
 
   /* USER CODE END TIM1_MspDeInit 1 */
+  }
+
+}
+
+/**
+* @brief TIM_IC MSP De-Initialization
+* This function freeze the hardware resources used in this example
+* @param htim_ic: TIM_IC handle pointer
+* @retval None
+*/
+void HAL_TIM_IC_MspDeInit(TIM_HandleTypeDef* htim_ic)
+{
+  if(htim_ic->Instance==TIM2)
+  {
+  /* USER CODE BEGIN TIM2_MspDeInit 0 */
+
+  /* USER CODE END TIM2_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_TIM2_CLK_DISABLE();
+
+    /**TIM2 GPIO Configuration
+    PA15     ------> TIM2_CH1
+    */
+    HAL_GPIO_DeInit(DHT11_S_GPIO_Port, DHT11_S_Pin);
+
+  /* USER CODE BEGIN TIM2_MspDeInit 1 */
+
+  /* USER CODE END TIM2_MspDeInit 1 */
   }
 
 }
